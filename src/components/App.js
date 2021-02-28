@@ -46,10 +46,12 @@ function App() {
 
     useEffect(() => {
         if (entry !== null){
-            let dur = entry ? 400:350;
+            let entryDuration = parseInt(getComputedStyle(html).getPropertyValue("--animation-entry-duration")) || 0;
+            let exitDuration = parseInt(getComputedStyle(html).getPropertyValue("--animation-exit-duration")) || 0;
+            let duration = entry ? entryDuration : exitDuration;
             setTimeout(function(){
                 setEntry(null);
-            }, dur)
+            }, duration)
         }
     },[number]);
 

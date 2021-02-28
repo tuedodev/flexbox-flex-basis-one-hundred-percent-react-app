@@ -3,6 +3,8 @@
 	--bg-black-transparent: rgba(0, 0, 0, 0.35);
 	--black: #293133;
 	--light: azure;
+	--animation-entry-duration: 400ms;
+	--animation-exit-duration: 350ms;
 }
 * {
 	padding: 0;
@@ -188,7 +190,7 @@ h6 {
 
 .entry {
 	animation-name: animEntry;
-	animation-duration: 0.4s;
+	animation-duration: var(--animation-entry-duration);
 	animation-iteration-count: 1;
 	animation-timing-function: ease;
 	animation-direction: normal;
@@ -196,7 +198,7 @@ h6 {
 
 .exit {
 	animation-name: animExit;
-	animation-duration: 0.35s;
+	animation-duration: var(--animation-exit-duration);
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in-out;
 	animation-direction: normal;
